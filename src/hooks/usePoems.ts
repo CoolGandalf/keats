@@ -17,7 +17,7 @@ export function usePoems() {
 
   // Load index on mount
   useEffect(() => {
-    fetch('/poems/index.json')
+    fetch(`${import.meta.env.BASE_URL}poems/index.json`)
       .then(r => r.json())
       .then((index: PoemIndex) => {
         indexRef.current = index
@@ -33,7 +33,7 @@ export function usePoems() {
     if (loadedChunks.current.has(chunkNum)) return chunkCache.current.get(chunkNum) || []
     loadedChunks.current.add(chunkNum)
 
-    const res = await fetch(`/poems/chunk-${chunkNum}.json`)
+    const res = await fetch(`${import.meta.env.BASE_URL}poems/chunk-${chunkNum}.json`)
     const poems: Poem[] = await res.json()
     chunkCache.current.set(chunkNum, poems)
     return poems
