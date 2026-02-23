@@ -1374,6 +1374,104 @@ def parse_wordsworth(text, pg_id, author, source_title, category):
     return parse_generic_caps(text, pg_id, author, source_title, category)
 
 
+def parse_frost_later(text, pg_id, author, source_title, category):
+    """Parse later Frost collections (Mountain Interval, New Hampshire).
+
+    Mountain Interval (pg29345): italic-wrapped titles like '_THE ROAD NOT TAKEN_'
+    New Hampshire (pg58611): centred ALL CAPS titles like '                   FIRE AND ICE'
+    Both: 2-space indented body lines.
+    """
+    lines = text.split('\n')
+    poems = []
+
+    # Skip past CONTENTS
+    contents_end = 0
+    for j, line in enumerate(lines):
+        if re.match(r'^\s*CONTENTS\s*$', line.strip(), re.IGNORECASE):
+            # Find the end of TOC: 3+ consecutive blank lines after TOC entries
+            blank_count = 0
+            for k in range(j + 1, len(lines)):
+                if not lines[k].strip():
+                    blank_count += 1
+                else:
+                    blank_count = 0
+                if blank_count >= 3 and k + 1 < len(lines) and lines[k + 1].strip():
+                    contents_end = k + 1
+                    break
+            break
+
+    # Skip front matter: dedication, publisher info, etc.
+    # Find the first poem by looking for a title pattern after TOC
+    i = contents_end
+
+    skip_headers = {
+        'NOTES', 'GRACE NOTES', 'NEW HAMPSHIRE', 'MOUNTAIN INTERVAL',
+        'CONTENTS', 'INDEX', 'PREFACE', 'INTRODUCTION', 'FOOTNOTES',
+        'SOME RECENT POETRY', 'THE HOME BOOK OF VERSE',
+        'HENRY HOLT AND COMPANY',
+    }
+
+    current_title = None
+    current_body = []
+
+    while i < len(lines):
+        stripped = lines[i].strip()
+
+        # Detect title: either italic-wrapped ALL CAPS or centred ALL CAPS
+        title_match = None
+
+        # Pattern 1: _TITLE_ (italic-wrapped, Mountain Interval)
+        m = re.match(r'^_([A-Z][A-Z\s,\'\-\.\(\)!?"]+)_\s*$', stripped)
+        if m:
+            title_match = m.group(1).strip(' .')
+
+        # Pattern 2: ALL CAPS title (centred or left-aligned) preceded by 2+ blank lines
+        if not title_match and stripped and is_all_caps_title(lines[i]) and len(stripped) < 80:
+            # Verify preceded by blank line(s) to distinguish from body text
+            if i > 0 and not lines[i - 1].strip():
+                title_match = stripped.strip(' .')
+
+        if title_match:
+            # Skip section headers and Gutenberg markers
+            if '***' in title_match or 'gutenberg' in title_match.lower():
+                i += 1
+                continue
+            clean = re.sub(r'[^A-Z ]', '', title_match).strip()
+            if clean in skip_headers:
+                i += 1
+                continue
+
+            # Save previous poem
+            if current_title and current_body:
+                poem = make_poem(current_title, current_body, author,
+                                 source_title, pg_id, category)
+                if poem:
+                    poems.append(poem)
+
+            current_title = title_match
+            current_body = []
+            i += 1
+            continue
+
+        if current_title:
+            # Strip italic markers from body lines
+            body_line = lines[i]
+            body_line = re.sub(r'^(\s*)_', r'\1', body_line)
+            body_line = re.sub(r'_(\s*)$', r'\1', body_line)
+            current_body.append(body_line)
+
+        i += 1
+
+    # Last poem
+    if current_title and current_body:
+        poem = make_poem(current_title, current_body, author,
+                         source_title, pg_id, category)
+        if poem:
+            poems.append(poem)
+
+    return poems
+
+
 def parse_burns(text, pg_id, author, source_title, category):
     """Parse Burns: titles are NOT indented, body is 5-space indented."""
     lines = text.split('\n')
@@ -1698,6 +1796,9 @@ PARSERS = {
     9622: parse_generic_caps,
     8774: parse_generic_caps,
     8824: parse_generic_caps,
+    # Frost (later collections)
+    29345: parse_frost_later,   # Mountain Interval
+    58611: parse_frost_later,   # New Hampshire
     # Whitman
     1322: parse_whitman,
     # Rubaiyat (special: numbered quatrains with periods)

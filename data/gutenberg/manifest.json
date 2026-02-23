@@ -1,57 +1,344 @@
 [
-  {"id": 1041, "title": "Shakespeare's Sonnets", "author": "William Shakespeare", "category": "shakespeare"},
-  {"id": 1045, "title": "Venus and Adonis", "author": "William Shakespeare", "category": "shakespeare"},
-  {"id": 1505, "title": "The Rape of Lucrece", "author": "William Shakespeare", "category": "shakespeare"},
-  {"id": 23684, "title": "Poems Published in 1820", "author": "John Keats", "category": "romantic"},
-  {"id": 8209, "title": "Poems 1817", "author": "John Keats", "category": "romantic"},
-  {"id": 24280, "title": "Endymion: A Poetic Romance", "author": "John Keats", "category": "romantic"},
-  {"id": 2490, "title": "Lamia", "author": "John Keats", "category": "romantic"},
-  {"id": 10219, "title": "The Poetical Works of William Wordsworth, Vol. 1", "author": "William Wordsworth", "category": "romantic"},
-  {"id": 9622, "title": "Lyrical Ballads, 1798", "author": "William Wordsworth & Samuel Taylor Coleridge", "category": "romantic"},
-  {"id": 8774, "title": "Poems in Two Volumes, Vol. 1", "author": "William Wordsworth", "category": "romantic"},
-  {"id": 8824, "title": "Poems in Two Volumes, Vol. 2", "author": "William Wordsworth", "category": "romantic"},
-  {"id": 4800, "title": "The Complete Poetical Works of Percy Bysshe Shelley", "author": "Percy Bysshe Shelley", "category": "romantic"},
-  {"id": 21700, "title": "Don Juan", "author": "Lord Byron", "category": "romantic"},
-  {"id": 5131, "title": "Childe Harold's Pilgrimage", "author": "Lord Byron", "category": "romantic"},
-  {"id": 1934, "title": "Songs of Innocence and of Experience", "author": "William Blake", "category": "romantic"},
-  {"id": 8208, "title": "Poems of Coleridge", "author": "Samuel Taylor Coleridge", "category": "romantic"},
-  {"id": 11101, "title": "Ancient Mariner and Select Poems", "author": "Samuel Taylor Coleridge", "category": "romantic"},
-  {"id": 1279, "title": "Poems and Songs of Robert Burns", "author": "Robert Burns", "category": "romantic"},
-  {"id": 8601, "title": "The Early Poems of Alfred Lord Tennyson", "author": "Alfred Lord Tennyson", "category": "victorian"},
-  {"id": 610, "title": "Idylls of the King", "author": "Alfred Lord Tennyson", "category": "victorian"},
-  {"id": 2002, "title": "Sonnets from the Portuguese", "author": "Elizabeth Barrett Browning", "category": "victorian"},
-  {"id": 10031, "title": "The Complete Poetical Works of Edgar Allan Poe", "author": "Edgar Allan Poe", "category": "american"},
-  {"id": 1322, "title": "Leaves of Grass", "author": "Walt Whitman", "category": "american"},
-  {"id": 12242, "title": "Poems by Emily Dickinson, Three Series, Complete", "author": "Emily Dickinson", "category": "american"},
-  {"id": 26, "title": "Paradise Lost", "author": "John Milton", "category": "epic"},
-  {"id": 6130, "title": "The Iliad (Pope's translation)", "author": "Homer / tr. Alexander Pope", "category": "epic"},
-  {"id": 3160, "title": "The Odyssey (Pope's translation)", "author": "Homer / tr. Alexander Pope", "category": "epic"},
-  {"id": 8800, "title": "The Divine Comedy (Cary's translation)", "author": "Dante / tr. Henry Francis Cary", "category": "epic"},
-  {"id": 1004, "title": "The Divine Comedy (Longfellow's translation)", "author": "Dante / tr. Henry Wadsworth Longfellow", "category": "epic"},
-  {"id": 246, "title": "The Rubaiyat of Omar Khayyam", "author": "Omar Khayyam / tr. Edward Fitzgerald", "category": "epic"},
-  {"id": 48688, "title": "The Poems of John Donne, Vol. 1", "author": "John Donne", "category": "metaphysical"},
-  {"id": 48772, "title": "The Poems of John Donne, Vol. 2", "author": "John Donne", "category": "metaphysical"},
-  {"id": 26288, "title": "To His Coy Mistress", "author": "Andrew Marvell", "category": "metaphysical"},
-  {"id": 38877, "title": "Poems", "author": "W.B. Yeats", "category": "modern"},
-  {"id": 36865, "title": "Responsibilities, and Other Poems", "author": "W.B. Yeats", "category": "modern"},
-  {"id": 30488, "title": "The Green Helmet and Other Poems", "author": "W.B. Yeats", "category": "modern"},
-  {"id": 30652, "title": "In The Seven Woods", "author": "W.B. Yeats", "category": "modern"},
-  {"id": 3021, "title": "A Boy's Will", "author": "Robert Frost", "category": "modern"},
-  {"id": 3026, "title": "North of Boston", "author": "Robert Frost", "category": "modern"},
-  {"id": 9800, "title": "The Rape of the Lock, and Other Poems", "author": "Alexander Pope", "category": "augustan"},
-  {"id": 2428, "title": "An Essay on Man; Moral Essays and Satires", "author": "Alexander Pope", "category": "augustan"},
-  {"id": 2383, "title": "The Canterbury Tales, and Other Poems", "author": "Geoffrey Chaucer", "category": "medieval"},
-  {"id": 70717, "title": "The Faerie Queene, Vol. 1 (Books I-III)", "author": "Edmund Spenser", "category": "renaissance"},
-  {"id": 72698, "title": "The Faerie Queene, Vol. 2 (Books IV-VII)", "author": "Edmund Spenser", "category": "renaissance"},
-  {"id": 16950, "title": "Goblin Market, The Prince's Progress, and Other Poems", "author": "Christina Rossetti", "category": "victorian"},
-  {"id": 19188, "title": "Poems", "author": "Christina Rossetti", "category": "victorian"},
-  {"id": 1057, "title": "Poems, with The Ballad of Reading Gaol", "author": "Oscar Wilde", "category": "victorian"},
-  {"id": 1031, "title": "Charmides, and Other Poems", "author": "Oscar Wilde", "category": "victorian"},
-  {"id": 323, "title": "Verses 1889-1896", "author": "Rudyard Kipling", "category": "victorian"},
-  {"id": 3167, "title": "Wessex Poems and Other Verses", "author": "Thomas Hardy", "category": "victorian"},
-  {"id": 3168, "title": "Poems of the Past and the Present", "author": "Thomas Hardy", "category": "victorian"},
-  {"id": 45159, "title": "The Persian Mystics: Jalalu'd-din Rumi", "author": "Rumi", "category": "classical_eastern"},
-  {"id": 42166, "title": "The Poems of Sappho: An Interpretative Rendition", "author": "Sappho", "category": "classical"},
-  {"id": 228, "title": "The Aeneid (Dryden's translation)", "author": "Virgil / tr. John Dryden", "category": "epic"},
-  {"id": 28621, "title": "The Metamorphoses", "author": "Ovid / tr. J.J. Howard", "category": "epic"}
+  {
+    "id": 1041,
+    "title": "Shakespeare's Sonnets",
+    "author": "William Shakespeare",
+    "category": "shakespeare"
+  },
+  {
+    "id": 1045,
+    "title": "Venus and Adonis",
+    "author": "William Shakespeare",
+    "category": "shakespeare"
+  },
+  {
+    "id": 1505,
+    "title": "The Rape of Lucrece",
+    "author": "William Shakespeare",
+    "category": "shakespeare"
+  },
+  {
+    "id": 23684,
+    "title": "Poems Published in 1820",
+    "author": "John Keats",
+    "category": "romantic"
+  },
+  {
+    "id": 8209,
+    "title": "Poems 1817",
+    "author": "John Keats",
+    "category": "romantic"
+  },
+  {
+    "id": 24280,
+    "title": "Endymion: A Poetic Romance",
+    "author": "John Keats",
+    "category": "romantic"
+  },
+  {
+    "id": 2490,
+    "title": "Lamia",
+    "author": "John Keats",
+    "category": "romantic"
+  },
+  {
+    "id": 10219,
+    "title": "The Poetical Works of William Wordsworth, Vol. 1",
+    "author": "William Wordsworth",
+    "category": "romantic"
+  },
+  {
+    "id": 9622,
+    "title": "Lyrical Ballads, 1798",
+    "author": "William Wordsworth & Samuel Taylor Coleridge",
+    "category": "romantic"
+  },
+  {
+    "id": 8774,
+    "title": "Poems in Two Volumes, Vol. 1",
+    "author": "William Wordsworth",
+    "category": "romantic"
+  },
+  {
+    "id": 8824,
+    "title": "Poems in Two Volumes, Vol. 2",
+    "author": "William Wordsworth",
+    "category": "romantic"
+  },
+  {
+    "id": 4800,
+    "title": "The Complete Poetical Works of Percy Bysshe Shelley",
+    "author": "Percy Bysshe Shelley",
+    "category": "romantic"
+  },
+  {
+    "id": 21700,
+    "title": "Don Juan",
+    "author": "Lord Byron",
+    "category": "romantic"
+  },
+  {
+    "id": 5131,
+    "title": "Childe Harold's Pilgrimage",
+    "author": "Lord Byron",
+    "category": "romantic"
+  },
+  {
+    "id": 1934,
+    "title": "Songs of Innocence and of Experience",
+    "author": "William Blake",
+    "category": "romantic"
+  },
+  {
+    "id": 8208,
+    "title": "Poems of Coleridge",
+    "author": "Samuel Taylor Coleridge",
+    "category": "romantic"
+  },
+  {
+    "id": 11101,
+    "title": "Ancient Mariner and Select Poems",
+    "author": "Samuel Taylor Coleridge",
+    "category": "romantic"
+  },
+  {
+    "id": 1279,
+    "title": "Poems and Songs of Robert Burns",
+    "author": "Robert Burns",
+    "category": "romantic"
+  },
+  {
+    "id": 8601,
+    "title": "The Early Poems of Alfred Lord Tennyson",
+    "author": "Alfred Lord Tennyson",
+    "category": "victorian"
+  },
+  {
+    "id": 610,
+    "title": "Idylls of the King",
+    "author": "Alfred Lord Tennyson",
+    "category": "victorian"
+  },
+  {
+    "id": 2002,
+    "title": "Sonnets from the Portuguese",
+    "author": "Elizabeth Barrett Browning",
+    "category": "victorian"
+  },
+  {
+    "id": 10031,
+    "title": "The Complete Poetical Works of Edgar Allan Poe",
+    "author": "Edgar Allan Poe",
+    "category": "american"
+  },
+  {
+    "id": 1322,
+    "title": "Leaves of Grass",
+    "author": "Walt Whitman",
+    "category": "american"
+  },
+  {
+    "id": 12242,
+    "title": "Poems by Emily Dickinson, Three Series, Complete",
+    "author": "Emily Dickinson",
+    "category": "american"
+  },
+  {
+    "id": 26,
+    "title": "Paradise Lost",
+    "author": "John Milton",
+    "category": "epic"
+  },
+  {
+    "id": 6130,
+    "title": "The Iliad (Pope's translation)",
+    "author": "Homer / tr. Alexander Pope",
+    "category": "epic"
+  },
+  {
+    "id": 3160,
+    "title": "The Odyssey (Pope's translation)",
+    "author": "Homer / tr. Alexander Pope",
+    "category": "epic"
+  },
+  {
+    "id": 8800,
+    "title": "The Divine Comedy (Cary's translation)",
+    "author": "Dante / tr. Henry Francis Cary",
+    "category": "epic"
+  },
+  {
+    "id": 1004,
+    "title": "The Divine Comedy (Longfellow's translation)",
+    "author": "Dante / tr. Henry Wadsworth Longfellow",
+    "category": "epic"
+  },
+  {
+    "id": 246,
+    "title": "The Rubaiyat of Omar Khayyam",
+    "author": "Omar Khayyam / tr. Edward Fitzgerald",
+    "category": "epic"
+  },
+  {
+    "id": 48688,
+    "title": "The Poems of John Donne, Vol. 1",
+    "author": "John Donne",
+    "category": "metaphysical"
+  },
+  {
+    "id": 48772,
+    "title": "The Poems of John Donne, Vol. 2",
+    "author": "John Donne",
+    "category": "metaphysical"
+  },
+  {
+    "id": 26288,
+    "title": "To His Coy Mistress",
+    "author": "Andrew Marvell",
+    "category": "metaphysical"
+  },
+  {
+    "id": 38877,
+    "title": "Poems",
+    "author": "W.B. Yeats",
+    "category": "modern"
+  },
+  {
+    "id": 36865,
+    "title": "Responsibilities, and Other Poems",
+    "author": "W.B. Yeats",
+    "category": "modern"
+  },
+  {
+    "id": 30488,
+    "title": "The Green Helmet and Other Poems",
+    "author": "W.B. Yeats",
+    "category": "modern"
+  },
+  {
+    "id": 30652,
+    "title": "In The Seven Woods",
+    "author": "W.B. Yeats",
+    "category": "modern"
+  },
+  {
+    "id": 3021,
+    "title": "A Boy's Will",
+    "author": "Robert Frost",
+    "category": "modern"
+  },
+  {
+    "id": 3026,
+    "title": "North of Boston",
+    "author": "Robert Frost",
+    "category": "modern"
+  },
+  {
+    "id": 9800,
+    "title": "The Rape of the Lock, and Other Poems",
+    "author": "Alexander Pope",
+    "category": "augustan"
+  },
+  {
+    "id": 2428,
+    "title": "An Essay on Man; Moral Essays and Satires",
+    "author": "Alexander Pope",
+    "category": "augustan"
+  },
+  {
+    "id": 2383,
+    "title": "The Canterbury Tales, and Other Poems",
+    "author": "Geoffrey Chaucer",
+    "category": "medieval"
+  },
+  {
+    "id": 70717,
+    "title": "The Faerie Queene, Vol. 1 (Books I-III)",
+    "author": "Edmund Spenser",
+    "category": "renaissance"
+  },
+  {
+    "id": 72698,
+    "title": "The Faerie Queene, Vol. 2 (Books IV-VII)",
+    "author": "Edmund Spenser",
+    "category": "renaissance"
+  },
+  {
+    "id": 16950,
+    "title": "Goblin Market, The Prince's Progress, and Other Poems",
+    "author": "Christina Rossetti",
+    "category": "victorian"
+  },
+  {
+    "id": 19188,
+    "title": "Poems",
+    "author": "Christina Rossetti",
+    "category": "victorian"
+  },
+  {
+    "id": 1057,
+    "title": "Poems, with The Ballad of Reading Gaol",
+    "author": "Oscar Wilde",
+    "category": "victorian"
+  },
+  {
+    "id": 1031,
+    "title": "Charmides, and Other Poems",
+    "author": "Oscar Wilde",
+    "category": "victorian"
+  },
+  {
+    "id": 323,
+    "title": "Verses 1889-1896",
+    "author": "Rudyard Kipling",
+    "category": "victorian"
+  },
+  {
+    "id": 3167,
+    "title": "Wessex Poems and Other Verses",
+    "author": "Thomas Hardy",
+    "category": "victorian"
+  },
+  {
+    "id": 3168,
+    "title": "Poems of the Past and the Present",
+    "author": "Thomas Hardy",
+    "category": "victorian"
+  },
+  {
+    "id": 45159,
+    "title": "The Persian Mystics: Jalalu'd-din Rumi",
+    "author": "Rumi",
+    "category": "classical_eastern"
+  },
+  {
+    "id": 42166,
+    "title": "The Poems of Sappho: An Interpretative Rendition",
+    "author": "Sappho",
+    "category": "classical"
+  },
+  {
+    "id": 228,
+    "title": "The Aeneid (Dryden's translation)",
+    "author": "Virgil / tr. John Dryden",
+    "category": "epic"
+  },
+  {
+    "id": 28621,
+    "title": "The Metamorphoses",
+    "author": "Ovid / tr. J.J. Howard",
+    "category": "epic"
+  },
+  {
+    "id": 29345,
+    "title": "Mountain Interval",
+    "author": "Robert Frost",
+    "category": "modern"
+  },
+  {
+    "id": 58611,
+    "title": "New Hampshire, A Poem; with Notes and Grace Notes",
+    "author": "Robert Frost",
+    "category": "modern"
+  }
 ]
