@@ -227,13 +227,37 @@ for i, line in enumerate(lg):
 
 if som_start:
     # Find section markers (numbered sections)
-    # Whitman's Song of Myself has 52 sections
-    # Extract opening (sections 1-6)
+    # Whitman's Song of Myself has 52 sections.
+    # Keep a short Section 1 entry in the live catalog; the full poem is too long
+    # for the app's daily-poem picker, but this puts the 1891–92 text in rotation.
+    sect1 = None
+    sect2 = None
     sect7 = None
     for i in range(som_start, min(som_start + 2000, len(lg))):
-        if lg[i].strip() == '7' or lg[i].strip() == '  7':
+        stripped = lg[i].strip()
+        if stripped == '1' and sect1 is None:
+            sect1 = i
+        elif stripped == '2' and sect2 is None:
+            sect2 = i
+        elif stripped == '7':
             sect7 = i
             break
+
+    if sect1 and sect2:
+        text = "Song of Myself (Section 1)\n\n" + ''.join(lg[sect1:sect2]).strip()
+        excerpts.append({
+            "title": "Song of Myself (Section 1)",
+            "author": "Walt Whitman",
+            "source": "Leaves of Grass — Song of Myself",
+            "source_id": 1322,
+            "category": "epic_excerpt",
+            "note": "The opening section of Whitman's 1891–92 'Death-Bed' edition text. Added from the Poetry Foundation request; the full poem is deliberately not in daily rotation because it is 1,600+ lines.",
+            "text": clean_gutenberg_text(text),
+            "verse_lines": count_verse_lines(text),
+            "reading_time_minutes": 0.6
+        })
+
+    # Longer reference excerpt: sections 1-6, including the famous grass passage.
     if sect7:
         text = ''.join(lg[som_start:sect7]).strip()
         excerpts.append({
@@ -244,7 +268,8 @@ if som_start:
             "category": "epic_excerpt",
             "note": "The opening of Whitman's masterpiece. 'I celebrate myself, and sing myself.' Includes the famous 'What is the grass?' passage. The founding document of American free verse.",
             "text": clean_gutenberg_text(text),
-            "verse_lines": count_verse_lines(text)
+            "verse_lines": count_verse_lines(text),
+            "reading_time_minutes": 6.0
         })
 
 # Crossing Brooklyn Ferry
